@@ -42,7 +42,7 @@
                                             {{task.assignee.userName}}
                                         </td>
                                         <td>
-                                          <button mat-raised-button type="submit" class="btn btn-white btn-round btn-just-icon" (click) = "openDialog(task)">
+                                          <button mat-raised-button type="submit" class="btn btn-white btn-round btn-just-icon" (click) = "openTaskDialog(task)">
                                               <i class="material-icons">edit</i>
                                               <div class="ripple-container"></div>
                                             </button>
@@ -94,11 +94,11 @@
                                           {{contributor.userName}}
                                       </td>
                                       <td>
-                                        <button mat-raised-button type="submit" class="btn btn-white btn-round btn-just-icon">
+                                        <button mat-raised-button type="submit" class="btn btn-white btn-round btn-just-icon" (click) = "openContributorDialog(contributor)">
                                             <i class="material-icons">edit</i>
                                             <div class="ripple-container"></div>
                                           </button>
-                                          <button mat-raised-button type="submit" class="btn btn-white btn-round btn-just-icon">
+                                          <button mat-raised-button type="submit" class="btn btn-white btn-round btn-just-icon"(click) = "deleteContributor(contributor)">
                                             <i class="material-icons">delete</i>
                                             <div class="ripple-container"></div>
                                           </button>

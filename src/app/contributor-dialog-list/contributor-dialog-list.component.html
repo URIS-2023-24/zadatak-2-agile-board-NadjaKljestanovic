@@ -1,0 +1,24 @@
+<h1 mat-dialog-title>
+    Edit contributor
+</h1>
+<div mat-dialog-content>
+    <mat-form-field>
+    <input placeholder="First name" matInput [(ngModel)]="data.firstName">
+    </mat-form-field><br>
+    <mat-form-field>
+    <input placeholder="Last name" matInput [(ngModel)]="data.lastName">
+    </mat-form-field><br>
+    <mat-form-field>
+    <input placeholder="User name" matInput [(ngModel)]="data.userName">
+    </mat-form-field><br>
+</div>
+<div mat-dialog-actions>
+    <button mat-raised-button type="submit" class="btn btn-white" [mat-dialog-close]="data">
+        Submit
+        <div class="ripple-container"></div>
+    </button>
+    <button mat-raised-button type="submit" class="btn btn-white" (click)="onClick()">
+        Close
+        <div class="ripple-container"></div>
+    </button>
+</div>
