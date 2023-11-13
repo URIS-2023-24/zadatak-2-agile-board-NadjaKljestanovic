@@ -1,23 +1,15 @@
 <h1 mat-dialog-title>
-    Edit task
+    Edit role
 </h1>
 <div mat-dialog-content>
     <mat-form-field>
-    <input placeholder="Title" matInput [(ngModel)]="data.title">
+    <input placeholder="Name" matInput [(ngModel)]="data.name">
     </mat-form-field><br>
     <mat-form-field>
     <input placeholder="Description" matInput [(ngModel)]="data.description">
     </mat-form-field><br>
     <mat-form-field>
-        <input placeholder="Estimated time" matInput [(ngModel)]="data.estimatedTime">
-    </mat-form-field><br>
-    <mat-form-field>
-        <mat-label>Assignee</mat-label>
-        <mat-select [(ngModel)]="data.assignee">
-            <mat-option *ngFor="let contributor of data.contributors" [value]="contributor">
-              {{contributor.userName}}
-            </mat-option>
-        </mat-select>
+        <input placeholder="Permissions" matInput [(ngModel)]="data.permissions">
     </mat-form-field>
 </div>
 <div mat-dialog-actions>

@@ -16,6 +16,7 @@ import {MatSelectModule} from '@angular/material/select';
 import{MatDialogModule} from '@angular/material/dialog';
 import {TaskDialogListComponent} from 'app/task-dialog-list/task-dialog-list.component';
 import { ContributorDialogListComponent } from 'app/contributor-dialog-list/contributor-dialog-list.component';
+import { RoleDialogListComponent } from 'app/role-dialog-list/role-dialog-list.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { ContributorDialogListComponent } from 'app/contributor-dialog-list/cont
     TableListComponent,
     NotificationsComponent,
     TaskDialogListComponent,
-    ContributorDialogListComponent
+    ContributorDialogListComponent,
+    RoleDialogListComponent
   ]
 })
 

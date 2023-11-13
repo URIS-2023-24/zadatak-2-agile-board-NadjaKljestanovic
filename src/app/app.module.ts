@@ -8,6 +8,7 @@ import { ComponentsModule } from './components/components.module';
 import { AppComponent } from './app.component';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { ContributorDialogListComponent } from './contributor-dialog-list/contributor-dialog-list.component';
+import { RoleDialogListComponent } from './role-dialog-list/role-dialog-list.component';
 
 @NgModule({
   imports: [

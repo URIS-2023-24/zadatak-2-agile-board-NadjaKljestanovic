@@ -5,18 +5,18 @@ import { Observable, map } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class TaskService {
+export class RoleService {
 
-  baseUrl = "https://app.microenv.com/backend/key/6d4e7398ab4f925b208324/rest/api/tasks/"
+  baseUrl = "https://app.microenv.com/backend/key/6d4e7398ab4f925b208324/rest/api/roles/"
+
+  private getUrl(){
+    return `${this.baseUrl}`;
+  }
 
   constructor(private httpClient: HttpClient) { }
 
-  public getTasks() : Observable<any> {
+  public getRoles() : Observable<any> {
     return this.httpClient.get(this.getUrl())
-    .pipe(map((response : Response) => response));
-  }
-
-  private getUrl() {
-    return `${this.baseUrl}`;
+    .pipe(map((response: Response) => response));
   }
 }

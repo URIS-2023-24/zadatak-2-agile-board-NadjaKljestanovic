@@ -21,6 +21,9 @@
                                       Description
                                     </th>
                                     <th>
+                                        Estimated time
+                                    </th>
+                                    <th>
                                       Assignee
                                     </th>
                                     <th>
@@ -36,7 +39,10 @@
                                             {{task.title}}
                                         </td>
                                         <td>
-                                            {{task.description}}
+                                            {{task.description}} 
+                                        </td>
+                                        <td>
+                                            {{task.estimatedTime}}
                                         </td>
                                         <td>
                                             {{task.assignee.userName}}
@@ -111,6 +117,55 @@
                   </div>
               </div>
           </div>
+          <div class="col-md-12">
+            <div class="card">
+                <div class="card-header card-header-danger">
+                    <h4 class="card-title ">Roles</h4>
+                    <p class="card-category">Role describes what permissions do contributor have.</p>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead class=" text-primary">
+                                <th>
+                                    Name
+                                </th>
+                                <th>
+                                  Description
+                                </th>
+                                <th>
+                                  Permissions
+                                </th>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let role of roles">
+                                    <td>
+                                        {{role.name}}
+                                    </td>
+                                    <td>
+                                        {{role.description}}
+                                    </td>
+                                    <td>
+                                        {{role.permissions}}
+                                    </td>
+                                    <td>
+                                      <button mat-raised-button type="submit" class="btn btn-white btn-round btn-just-icon" (click) = "openRoleDialog(role)">
+                                          <i class="material-icons">edit</i>
+                                          <div class="ripple-container"></div>
+                                        </button>
+                                        <button mat-raised-button type="submit" class="btn btn-white btn-round btn-just-icon"(click) = "deleteRole(role)">
+                                          <i class="material-icons">delete</i>
+                                          <div class="ripple-container"></div>
+                                        </button>
+                                    </td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
         </div>
     </div>
   </div>
